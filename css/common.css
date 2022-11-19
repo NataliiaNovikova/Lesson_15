@@ -1,0 +1,80 @@
+/* Кнопка  */
+.button {
+    display: inline-block;
+    background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
+    border-radius: 4px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+    /* за макетом line-height: 52px; - на усю висоту блоку, якщо тексту буде більше, буне не гарно, тому:
+    оскільки font-size: 16рх;, беремо line-height трошкі більший - 20рх.
+    line-height / font-size  */
+    line-height: 1.25;
+    padding: 16px 40px;
+    color: #fff;
+    position: relative;
+}
+
+.button span {
+    position: relative;
+    z-index: 2;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease 0s;
+    opacity: 0;
+    border-radius: 4px;
+    background: linear-gradient(55.95deg, #ca3530 0%, #c94d05 100%);
+}
+.button:hover::before {
+    opacity: 1;
+}
+
+/* Кнопка з границею */
+.button--border {
+    background: transparent;
+    position: relative;
+    border: 1px solid #ff3f3a;
+    color: #ff3f3a;
+}
+
+.button--border:hover {
+    color: #fff;
+    border: 1px solid #ff3f3a;
+    background-color: #ff3f3a;
+}
+
+/* Основні заголовки  */
+.subtitle {
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1e212c;
+    margin-bottom: 8px;
+}
+.title {
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 1.3;
+    color: #1e212c;
+}
+/* Список з векторною галочкою */
+.list {
+    align-items: center;
+}
+.list li {
+    
+}
+.list li {
+    content: "";
+    background: url("../img/icon/Vector10_mark.svg") 0 6px / 16px no-repeat;
+    padding: 0px 0px 0px 30px;
+    line-height: 1.6;
+}
